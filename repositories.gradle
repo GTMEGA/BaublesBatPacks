@@ -1,0 +1,12 @@
+// Add any additional repositiroes for your dependencies here
+
+repositories {
+//    maven {
+//        name = "ic2"
+//        url = "https://maven.ic2.player.to/"
+//    }
+    maven {
+        name = "CodeChicken"
+        url = "https://chickenbones.net/maven/"
+    }
+}
