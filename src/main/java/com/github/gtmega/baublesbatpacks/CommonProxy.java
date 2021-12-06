@@ -1,8 +1,11 @@
 package com.github.gtmega.baublesbatpacks;
 
+import codechicken.nei.NEIActions;
+import codechicken.nei.api.API;
 import com.github.gtmega.baublesbatpacks.items.BatPack;
 import com.github.gtmega.baublesbatpacks.items.Items;
 import cpw.mods.fml.common.event.*;
+import gregtech.api.util.GT_ModHandler;
 import ic2.core.init.InternalName;
 import net.minecraft.item.ItemStack;
 
@@ -26,7 +29,8 @@ public class CommonProxy {
 
     // postInit "Handle interaction with other mods, complete your setup based on this."
     public void postInit(FMLPostInitializationEvent event) {
-
+        ItemStack stack = GT_ModHandler.getModItem("IC2","itemArmorAdvBatpack",1);
+        API.hideItem(stack);
     }
 
     public void serverAboutToStart(FMLServerAboutToStartEvent event) {

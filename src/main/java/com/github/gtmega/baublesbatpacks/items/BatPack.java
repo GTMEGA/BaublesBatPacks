@@ -1,5 +1,6 @@
 package com.github.gtmega.baublesbatpacks.items;
 
+import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBaubles;
 import ic2.core.init.InternalName;
 import ic2.core.item.armor.ItemArmorElectric;
 import net.minecraft.item.ItemStack;
