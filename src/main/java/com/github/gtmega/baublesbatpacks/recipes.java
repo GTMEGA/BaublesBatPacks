@@ -72,5 +72,29 @@ public class recipes {
             GT_ModHandler.addCraftingRecipe(AdvancedLapPack.stack,new Object[]{"CEC","EBE","WTW",
                     'C',carcbon,'E',crystal,'B',EnergyPack.stack,'W',wire,'T',circuit});
         }
+        {
+            ItemStack pack = GT_ModHandler.getModItem("IC2","itemArmorBatpack",1,GT_Values.W);
+            GT_ModHandler.addCraftingRecipe(BatPack.stack,new Object[]{"B",'B',pack});
+        }
+        {
+            ItemStack pack = GT_ModHandler.getModItem("IC2","itemArmorAdvBatpack",1,GT_Values.W);
+            GT_ModHandler.addCraftingRecipe(AdvPack.stack,new Object[]{"B",'B',pack});
+        }
+        {
+            ItemStack pack = GT_ModHandler.getModItem("IC2","itemArmorEnergypack",1,GT_Values.W);
+            GT_ModHandler.addCraftingRecipe(EnergyPack.stack,new Object[]{"B",'B',pack});
+        }
+        {
+            ItemStack pack = GT_ModHandler.getModItem("GraviSuite","advLappack",1,GT_Values.W);
+            GT_ModHandler.addCraftingRecipe(AdvancedLapPack.stack,new Object[]{"B",'B',pack});
+        }
+        {
+            ItemStack pack = GT_ModHandler.getModItem("GraviSuite","ultimateLappack",1,GT_Values.W);
+            GT_ModHandler.addCraftingRecipe(UltimateLapPack.stack,new Object[]{"B",'B',pack});
+        }
+        {
+            ItemStack pack = GT_ModHandler.getModItem("GraviSuite","epicLappack",1,GT_Values.W);
+            GT_ModHandler.addCraftingRecipe(EpicLapPack.stack,new Object[]{"B",'B',pack});
+        }
     }
 }
