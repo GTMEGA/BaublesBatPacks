@@ -31,6 +31,7 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent event) {
         ItemStack stack = GT_ModHandler.getModItem("IC2","itemArmorAdvBatpack",1);
         API.hideItem(stack);
+        recipes.load();
     }
 
     public void serverAboutToStart(FMLServerAboutToStartEvent event) {

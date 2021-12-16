@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 
 public class Items {
 
-    enum Item {
+    public enum Item {
         BatPack,
         AdvPack,
         EnergyPack,
