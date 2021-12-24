@@ -39,9 +39,9 @@ public interface IBatPackBaubles extends IBauble {
         Item item = toCharge.getItem();
         if (item instanceof IBatPackBaubles) return 0;
         if (item instanceof IElectricItemManager) {
-            return  ((IElectricItemManager) item).charge(toCharge,maxTransfer,getTier(),false,false);
+            return  ((IElectricItemManager) item).charge(toCharge,maxTransfer,getTier(),true,false);
         } else if (item instanceof IElectricItem) {
-            return ElectricItem.manager.charge(toCharge,maxTransfer,getTier(),false,false);
+            return ElectricItem.manager.charge(toCharge,maxTransfer,getTier(),true,false);
         }
         return 0;
     }
