@@ -13,4 +13,8 @@ repositories {
         name = "CodeChicken"
         url = "https://chickenbones.net/maven/"
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
 }
