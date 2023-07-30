@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 
 public class AdvancedLapPack extends ItemAdvancedLappack implements IBatPackBaubles {
 
-    public AdvancedLapPack(int maxCharge,int tier, int transferLimit) {
+    public AdvancedLapPack(int maxCharge, int tier, int transferLimit) {
         super(ArmorMaterial.DIAMOND, 0, 1, maxCharge, tier, transferLimit);
         setUnlocalizedName("advLappack");
         GameRegistry.registerItem(this, getUnlocalizedName());

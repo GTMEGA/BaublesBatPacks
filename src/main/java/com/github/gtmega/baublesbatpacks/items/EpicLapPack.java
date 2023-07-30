@@ -6,7 +6,7 @@ import gravisuite.lappacks.ItemEpicLappack;
 import net.minecraft.item.ItemStack;
 
 public class EpicLapPack extends ItemEpicLappack implements IBatPackBaubles {
-    public EpicLapPack(int maxCharge,int tier, int transferLimit) {
+    public EpicLapPack(int maxCharge, int tier, int transferLimit) {
         super(ArmorMaterial.DIAMOND, 0, 1, maxCharge, tier, transferLimit);
         setUnlocalizedName("epiclappack");
         GameRegistry.registerItem(this, getUnlocalizedName());

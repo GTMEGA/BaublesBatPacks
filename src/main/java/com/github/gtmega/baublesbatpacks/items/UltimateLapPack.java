@@ -6,7 +6,7 @@ import gravisuite.lappacks.ItemUltimateLappack;
 import net.minecraft.item.ItemStack;
 
 public class UltimateLapPack extends ItemUltimateLappack implements IBatPackBaubles {
-    public UltimateLapPack(int maxCharge,int tier, int transferLimit) {
+    public UltimateLapPack(int maxCharge, int tier, int transferLimit) {
         super(ArmorMaterial.DIAMOND, 0, 1, maxCharge, tier, transferLimit);
         setUnlocalizedName("ultLappack");
         GameRegistry.registerItem(this, getUnlocalizedName());

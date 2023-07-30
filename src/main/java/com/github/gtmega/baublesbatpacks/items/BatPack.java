@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 public class BatPack extends ItemArmorElectric implements IBatPackBaubles {
 
     public BatPack(InternalName internalName, double maxCharge, int tier, double transferLimit) {
-        super(internalName, InternalName.batpack,1,maxCharge,transferLimit,tier);
+        super(internalName, InternalName.batpack, 1, maxCharge, transferLimit, tier);
     }
 
     public boolean canProvideEnergy(ItemStack itemStack) {

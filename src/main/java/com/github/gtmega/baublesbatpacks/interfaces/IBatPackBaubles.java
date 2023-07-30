@@ -24,34 +24,34 @@ public interface IBatPackBaubles extends IBauble {
             EntityPlayerMP mpPlayer = (EntityPlayerMP) player;
             ItemStack heldItem = mpPlayer.inventory.mainInventory[mpPlayer.inventory.currentItem];
             if (heldItem != null) {
-                used += chargeItem(heldItem,transfer-used);
+                used += chargeItem(heldItem, transfer - used);
             }
             for (ItemStack stack : mpPlayer.inventory.armorInventory) {
                 if (stack != null) {
-                    used += chargeItem(stack,transfer-used);
+                    used += chargeItem(stack, transfer - used);
                 }
             }
-            discharge(batPack,used);
+            discharge(batPack, used);
         }
     }
 
-    default double chargeItem(ItemStack toCharge,double maxTransfer) {
+    default double chargeItem(ItemStack toCharge, double maxTransfer) {
         Item item = toCharge.getItem();
         if (item instanceof IBatPackBaubles) return 0;
         if (item instanceof IElectricItemManager) {
-            return  ((IElectricItemManager) item).charge(toCharge,maxTransfer,getTier(),true,false);
+            return ((IElectricItemManager) item).charge(toCharge, maxTransfer, getTier(), true, false);
         } else if (item instanceof IElectricItem) {
-            return ElectricItem.manager.charge(toCharge,maxTransfer,getTier(),true,false);
+            return ElectricItem.manager.charge(toCharge, maxTransfer, getTier(), true, false);
         }
         return 0;
     }
 
     default void discharge(ItemStack batPack, double amount) {
-        ElectricItem.manager.discharge(batPack,amount,getTier(),false,false,false);
+        ElectricItem.manager.discharge(batPack, amount, getTier(), false, false, false);
     }
 
     default double getMaxChargeEnergy(ItemStack stack) {
-        return ElectricItem.manager.discharge(stack,getMaxTransfer(stack),getTier(),false,false,true);
+        return ElectricItem.manager.discharge(stack, getMaxTransfer(stack), getTier(), false, false, true);
     }
 
     @Override
