@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
      version = Tags.VERSION,
      name = Tags.MODNAME,
      acceptedMinecraftVersions = "[1.7.10]")
-public class MyMod {
+public class BaublesBatPacks {
 
     private static Logger LOG = LogManager.getLogger(Tags.MODID);
 

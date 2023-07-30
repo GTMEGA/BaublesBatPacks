@@ -1,12 +1,9 @@
 package com.github.gtmega.baublesbatpacks;
 
-import codechicken.nei.NEIActions;
 import codechicken.nei.api.API;
-import com.github.gtmega.baublesbatpacks.items.BatPack;
 import com.github.gtmega.baublesbatpacks.items.Items;
 import cpw.mods.fml.common.event.*;
 import gregtech.api.util.GT_ModHandler;
-import ic2.core.init.InternalName;
 import net.minecraft.item.ItemStack;
 
 public class CommonProxy {
@@ -16,8 +13,8 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
-        MyMod.info(Config.greeting);
-        MyMod.info("I am " + Tags.MODNAME + " at version " + Tags.VERSION + " and group name " + Tags.GROUPNAME);
+        BaublesBatPacks.info(Config.greeting);
+        BaublesBatPacks.info("I am " + Tags.MODNAME + " at version " + Tags.VERSION + " and group name " + Tags.GROUPNAME);
 
         Items.init();
     }
