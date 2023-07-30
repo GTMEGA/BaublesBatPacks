@@ -1,8 +1,11 @@
 package com.github.gtmega.baublesbatpacks.items;
 
 import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBaubles;
+
 import cpw.mods.fml.common.registry.GameRegistry;
+
 import gravisuite.lappacks.ItemEpicLappack;
+
 import net.minecraft.item.ItemStack;
 
 public class EpicLapPack extends ItemEpicLappack implements IBatPackBaubles {

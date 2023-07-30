@@ -2,8 +2,11 @@ package com.github.gtmega.baublesbatpacks;
 
 import codechicken.nei.api.API;
 import com.github.gtmega.baublesbatpacks.items.Items;
+
 import cpw.mods.fml.common.event.*;
+
 import gregtech.api.util.GT_ModHandler;
+
 import net.minecraft.item.ItemStack;
 
 public class CommonProxy {
@@ -14,7 +17,10 @@ public class CommonProxy {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
         BaublesBatPacks.info(Config.greeting);
-        BaublesBatPacks.info("I am " + Tags.MODNAME + " at version " + Tags.VERSION + " and group name " + Tags.GROUPNAME);
+        BaublesBatPacks.info(String.format("I am %s at version %s and group name %s",
+                                           Tags.MODNAME,
+                                           Tags.VERSION,
+                                           Tags.GROUPNAME));
 
         Items.init();
     }

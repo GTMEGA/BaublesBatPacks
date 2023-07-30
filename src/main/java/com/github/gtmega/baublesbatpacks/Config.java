@@ -21,7 +21,10 @@ public class Config {
         Configuration configuration = new Configuration(configFile);
         configuration.load();
 
-        Property greetingProperty = configuration.get(Categories.general, "greeting", Defaults.greeting, "How shall I greet?");
+        Property greetingProperty = configuration.get(Categories.general,
+                                                      "greeting",
+                                                      Defaults.greeting,
+                                                      "How shall I greet?");
         greeting = greetingProperty.getString();
 
         if (configuration.hasChanged()) {

@@ -3,6 +3,7 @@ package com.github.gtmega.baublesbatpacks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.*;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +15,8 @@ public class BaublesBatPacks {
 
     private static Logger LOG = LogManager.getLogger(Tags.MODID);
 
-    @SidedProxy(clientSide = Tags.GROUPNAME + ".ClientProxy", serverSide = Tags.GROUPNAME + ".CommonProxy")
+    @SidedProxy(clientSide = Tags.GROUPNAME + ".ClientProxy",
+                serverSide = Tags.GROUPNAME + ".CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

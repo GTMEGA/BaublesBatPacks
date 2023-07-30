@@ -5,6 +5,7 @@ import baubles.api.IBauble;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
 import ic2.api.item.IElectricItemManager;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
@@ -19,10 +20,10 @@ public interface IBatPackBaubles extends IBauble {
     @Override
     default void onWornTick(ItemStack batPack, EntityLivingBase player) {
         if (player instanceof EntityPlayerMP) {
-            double transfer = getMaxChargeEnergy(batPack);
-            double used = 0;
+            double         transfer = getMaxChargeEnergy(batPack);
+            double         used     = 0;
             EntityPlayerMP mpPlayer = (EntityPlayerMP) player;
-            ItemStack heldItem = mpPlayer.inventory.mainInventory[mpPlayer.inventory.currentItem];
+            ItemStack      heldItem = mpPlayer.inventory.mainInventory[mpPlayer.inventory.currentItem];
             if (heldItem != null) {
                 used += chargeItem(heldItem, transfer - used);
             }
@@ -37,7 +38,9 @@ public interface IBatPackBaubles extends IBauble {
 
     default double chargeItem(ItemStack toCharge, double maxTransfer) {
         Item item = toCharge.getItem();
-        if (item instanceof IBatPackBaubles) return 0;
+        if (item instanceof IBatPackBaubles) {
+            return 0;
+        }
         if (item instanceof IElectricItemManager) {
             return ((IElectricItemManager) item).charge(toCharge, maxTransfer, getTier(), true, false);
         } else if (item instanceof IElectricItem) {
