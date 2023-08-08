@@ -1,5 +1,6 @@
 package com.github.gtmega.baublesbatpacks;
 
+import baubles.api.expanded.BaubleExpandedSlots;
 import com.github.gtmega.baublesbatpacks.items.Items;
 
 import cpw.mods.fml.common.event.*;
@@ -17,6 +18,11 @@ public class CommonProxy {
                                            Tags.VERSION,
                                            Tags.GROUPNAME));
 
+//        BaubleExpandedSlots.tryRegisterType("batpack-producer");
+//        BaubleExpandedSlots.tryAssignSlotOfType("batpack-producer");
+
+        BaubleExpandedSlots.tryRegisterType(Constants.batpackType);
+        BaubleExpandedSlots.tryAssignSlotOfType(Constants.batpackType);
         Items.init();
     }
 
