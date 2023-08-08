@@ -17,4 +17,8 @@ repositories {
         name = "Modrinth"
         url = "https://api.modrinth.com/maven"
     }
+    maven {
+        name = "FalsePattern Maven"
+        url = "https://mvn.falsepattern.com/releases"
+    }
 }
