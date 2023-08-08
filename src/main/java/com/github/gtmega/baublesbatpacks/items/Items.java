@@ -1,34 +1,51 @@
 package com.github.gtmega.baublesbatpacks.items;
 
-import ic2.core.init.InternalName;
-
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Items {
-
-    public enum Item {
-        BatPack,
-        AdvPack,
-        EnergyPack,
-        LapPack,
-        AdvancedLapPack,
-        UltimateLapPack,
-        EpicLapPack;
-        public ItemStack stack;
-    }
-
+    public static Item batpackBaubleT1;
+    public static Item batpackBaubleT2;
+    public static Item batpackBaubleT3;
+    public static Item batpackBaubleT4;
+    public static Item batpackBaubleT5;
+    public static Item batpackBaubleT6;
 
     public static void init() {
-        registerBatPack(Item.BatPack, InternalName.itemArmorBatpack, 120_000D, 1, 200D);
-        registerBatPack(Item.AdvPack, InternalName.itemArmorAdvBatpack, 1_200_000D, 2, 2_000D);
-        registerBatPack(Item.EnergyPack, InternalName.itemArmorEnergypack, 4_000_000D, 3, 8_000D);
-        //registerBatPack(Item.LapPack,InternalName.itemArmorLappack,20000000D,4,80_000D);
-        Item.AdvancedLapPack.stack = new ItemStack(new AdvancedLapPack(6_000_000, 3, 1000_000));
-        Item.UltimateLapPack.stack = new ItemStack(new UltimateLapPack(60_000_000, 4, 600_000));
-        Item.EpicLapPack.stack     = new ItemStack(new EpicLapPack(600_000_000, 5, 6_000_000));
-    }
+        batpackBaubleT1 = new BatPackBauble("batpackBaubleT1",
+                                            120_000D,
+                                            1,
+                                            200D);
+        GameRegistry.registerItem(batpackBaubleT1, batpackBaubleT1.getUnlocalizedName());
 
-    public static void registerBatPack(Item item, InternalName name, double capacity, int tier, double dischargeRate) {
-        item.stack = new ItemStack(new BatPack(name, capacity, tier, dischargeRate));
+        batpackBaubleT2 = new BatPackBauble("batpackBaubleT2",
+                                            1_200_000D,
+                                            2,
+                                            2_000D);
+        GameRegistry.registerItem(batpackBaubleT2, batpackBaubleT2.getUnlocalizedName());
+
+        batpackBaubleT3 = new BatPackBauble("batpackBaubleT3",
+                                            4_000_000D,
+                                            3,
+                                            8_000D);
+        GameRegistry.registerItem(batpackBaubleT3, batpackBaubleT3.getUnlocalizedName());
+
+        batpackBaubleT4 = new BatPackBauble("batpackBaubleT4",
+                                            6_000_00D,
+                                            4,
+                                            100_000D);
+        GameRegistry.registerItem(batpackBaubleT4, batpackBaubleT4.getUnlocalizedName());
+
+        batpackBaubleT5 = new BatPackBauble("batpackBaubleT5",
+                                            60_000_000D,
+                                            5,
+                                            500_000D);
+        GameRegistry.registerItem(batpackBaubleT5, batpackBaubleT5.getUnlocalizedName());
+
+        batpackBaubleT6 = new BatPackBauble("batpackBaubleT6",
+                                            600_000_000D,
+                                            6,
+                                            6_000_000);
+        GameRegistry.registerItem(batpackBaubleT6, batpackBaubleT6.getUnlocalizedName());
     }
 }
