@@ -4,9 +4,13 @@ import com.github.gtmega.baublesbatpacks.Tags;
 import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBaubles;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
+
+import java.util.List;
 
 public class BatPackBauble extends Item implements IBatPackBaubles {
     protected int tier;
@@ -60,5 +64,19 @@ public class BatPackBauble extends Item implements IBatPackBaubles {
     @Override
     public double getTransferLimit(ItemStack itemStack) {
         return this.transferLimit;
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List info, boolean b) {
+        String baseUnlocalized = "item.batpackBauble.desc.";
+
+        int index = 0;
+        String localized = StatCollector.translateToLocal(baseUnlocalized + index);
+        while(!localized.contains(baseUnlocalized)) {
+            info.add(localized);
+
+            localized = StatCollector.translateToLocal(baseUnlocalized + ++index);
+        }
     }
 }
