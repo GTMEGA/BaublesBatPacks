@@ -13,7 +13,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public interface IBatPackBaubles extends IBauble, IBaubleExpanded, IElectricItem {
+public interface IBatPackBauble extends IBauble, IBaubleExpanded, IElectricItem {
     @Override
     default void onWornTick(ItemStack batPack, EntityLivingBase player) {
         if (player instanceof EntityPlayerMP) {
@@ -39,7 +39,7 @@ public interface IBatPackBaubles extends IBauble, IBaubleExpanded, IElectricItem
     default double chargeItem(ItemStack toCharge, double maxTransfer) {
         Item item = toCharge.getItem();
 
-        if (item instanceof IBatPackBaubles) {
+        if (item instanceof IBatPackBauble) {
             return 0;
         }
 

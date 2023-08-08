@@ -1,7 +1,7 @@
 package com.github.gtmega.baublesbatpacks.items;
 
 import com.github.gtmega.baublesbatpacks.Tags;
-import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBaubles;
+import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBauble;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,7 +12,7 @@ import net.minecraft.util.StatCollector;
 
 import java.util.List;
 
-public class BatPackBauble extends Item implements IBatPackBaubles {
+public class BatPackBauble extends Item implements IBatPackBauble {
     protected int tier;
     protected double maxCharge;
     protected double transferLimit;
