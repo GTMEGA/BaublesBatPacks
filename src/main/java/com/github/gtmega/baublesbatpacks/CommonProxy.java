@@ -3,6 +3,8 @@ package com.github.gtmega.baublesbatpacks;
 import baubles.api.expanded.BaubleExpandedSlots;
 import com.github.gtmega.baublesbatpacks.items.Items;
 
+import net.minecraftforge.common.ForgeModContainer;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.*;
 
 public class CommonProxy {
@@ -21,8 +23,11 @@ public class CommonProxy {
 //        BaubleExpandedSlots.tryRegisterType("batpack-producer");
 //        BaubleExpandedSlots.tryAssignSlotOfType("batpack-producer");
 
-        BaubleExpandedSlots.tryRegisterType(Constants.batpackType);
-        BaubleExpandedSlots.tryAssignSlotOfType(Constants.batpackType);
+        if (Loader.isModLoaded("Baubles Expanded")) {
+            BaubleExpandedSlots.tryRegisterType(Constants.batpackType);
+            BaubleExpandedSlots.tryAssignSlotOfType(Constants.batpackType);
+        }
+
         Items.init();
     }
 

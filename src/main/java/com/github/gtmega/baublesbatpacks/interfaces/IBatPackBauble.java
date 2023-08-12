@@ -12,7 +12,9 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.Optional;
 
+@Optional.Interface(modid = "baubles|expanded", iface = "baubles.api.expanded.IBaubleExpanded")
 public interface IBatPackBauble extends IBauble, IBaubleExpanded, IElectricItem {
     @Override
     default void onWornTick(ItemStack batPack, EntityLivingBase player) {
