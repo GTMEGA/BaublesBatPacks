@@ -1,11 +1,44 @@
-item.batpackBaubleT1.name=Batpack Tier 1
-item.batpackBaubleT2.name=Batpack Tier 2
-item.batpackBaubleT3.name=Batpack Tier 3
-item.batpackBaubleT4.name=Batpack Tier 4
-item.batpackBaubleT5.name=Batpack Tier 5
-item.batpackBaubleT6.name=Batpack Tier 6
 
-item.batpackBauble.desc.0=houston
-item.batpackBauble.desc.1=pls
-item.batpackBauble.desc.2=change
-item.batpackBauble.desc.3=this
+item.batpackBauble.t1.name=Batpack Tier 1
+item.batpackBauble.t1.desc.0=houston
+item.batpackBauble.t1.desc.1=pls
+item.batpackBauble.t1.desc.2=change
+item.batpackBauble.t1.desc.3=this
+item.batpackBauble.t1.desc.4=(1/6)
+
+item.batpackBauble.t2.name=Batpack Tier 2
+item.batpackBauble.t2.desc.0=I
+item.batpackBauble.t2.desc.1=hope
+item.batpackBauble.t2.desc.2=you
+item.batpackBauble.t2.desc.3=are
+item.batpackBauble.t2.desc.4=(2/6)
+
+item.batpackBauble.t3.name=Batpack Tier 3
+item.batpackBauble.t3.desc.0=happy
+item.batpackBauble.t3.desc.1=with
+item.batpackBauble.t3.desc.2=these
+item.batpackBauble.t3.desc.3=changes
+item.batpackBauble.t3.desc.4=(3/6)
+
+item.batpackBauble.t4.name=Batpack Tier 4
+item.batpackBauble.t4.desc.0=Lots
+item.batpackBauble.t4.desc.1=of
+item.batpackBauble.t4.desc.2=love,
+item.batpackBauble.t4.desc.3=matt-159
+item.batpackBauble.t4.desc.4=(4/6)
+
+item.batpackBauble.t5.name=Batpack Tier 5
+item.batpackBauble.t5.desc.0=P.S.
+item.batpackBauble.t5.desc.1=i
+item.batpackBauble.t5.desc.2=hope
+item.batpackBauble.t5.desc.3=you
+item.batpackBauble.t5.desc.4=(5/6)
+
+item.batpackBauble.t6.name=Batpack Tier 6
+item.batpackBauble.t6.desc.0=have
+item.batpackBauble.t6.desc.1=a
+item.batpackBauble.t6.desc.2=day
+item.batpackBauble.t6.desc.3=of
+item.batpackBauble.t6.desc.4=all
+item.batpackBauble.t6.desc.5=time
+item.batpackBauble.t6.desc.6=(6/6)

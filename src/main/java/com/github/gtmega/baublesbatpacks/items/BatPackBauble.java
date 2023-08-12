@@ -2,6 +2,7 @@ package com.github.gtmega.baublesbatpacks.items;
 
 import com.github.gtmega.baublesbatpacks.Tags;
 import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBauble;
+import lombok.val;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,8 +20,8 @@ public class BatPackBauble extends Item implements IBatPackBauble {
 
     private IIcon icon;
 
-    public BatPackBauble(String unlocalizedName, double maxCharge, int tier, double transferLimit) {
-        this.setUnlocalizedName(unlocalizedName);
+    public BatPackBauble(double maxCharge, int tier, double transferLimit) {
+        this.setUnlocalizedName("batpackBauble.t" + tier);
         this.maxCharge = maxCharge;
         this.tier = tier;
         this.transferLimit = transferLimit;
@@ -69,7 +70,7 @@ public class BatPackBauble extends Item implements IBatPackBauble {
     @Override
     @SuppressWarnings("unchecked")
     public void addInformation(ItemStack itemStack, EntityPlayer player, List info, boolean b) {
-        String baseUnlocalized = "item.batpackBauble.desc.";
+        String baseUnlocalized = String.format("item.batpackBauble.t%d.desc.", this.getTier(itemStack));
 
         int index = 0;
         String localized = StatCollector.translateToLocal(baseUnlocalized + index);
