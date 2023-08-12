@@ -5,11 +5,11 @@ item.batpackBauble.t1.desc.1=Can charge§3 LV§7 items or lower.
 item.batpackBauble.t1.desc.2=You can charge this using a charge pad, or in a machine.
 item.batpackBauble.t1.desc.3=Usable in your battery belt slot.
 
-item.batpackBauble.t2.name=Portable Power Pack MKII
-item.batpackBauble.t2.desc.0=Charges your armor and held items.
-item.batpackBauble.t2.desc.1=Can charge§3 MV§7 items or lower.
-item.batpackBauble.t2.desc.2=You can charge this using a charge pad, or in a machine.
-item.batpackBauble.t2.desc.3=Usable in your battery belt slot.
+item.batpackBauble.t4.name=Portable Power Pack MKII
+item.batpackBauble.t4.desc.0=Charges your armor and held items.
+item.batpackBauble.t4.desc.1=Can charge§3 MV§7 items or lower.
+item.batpackBauble.t4.desc.2=You can charge this using a charge pad, or in a machine.
+item.batpackBauble.t4.desc.3=Usable in your battery belt slot.
 
 item.batpackBauble.t3.name=Portable Power Pack MKIII
 item.batpackBauble.t3.desc.0=Charges your armor and held items.
@@ -17,11 +17,11 @@ item.batpackBauble.t3.desc.1=Can charge§3 HV§7 items or lower.
 item.batpackBauble.t3.desc.2=You can charge this using a charge pad, or in a machine.
 item.batpackBauble.t3.desc.3=Usable in your battery belt slot.
 
-item.batpackBauble.t4.name=Portable Power Pack MKIV
-item.batpackBauble.t4.desc.0=Charges your armor and held items.
-item.batpackBauble.t4.desc.1=Can charge§3 EV§7 items or lower.
-item.batpackBauble.t4.desc.2=You can charge this using a charge pad, or in a machine.
-item.batpackBauble.t4.desc.3=Usable in your battery belt slot.
+item.batpackBauble.t2.name=Portable Power Pack MKIV
+item.batpackBauble.t2.desc.0=Charges your armor and held items.
+item.batpackBauble.t2.desc.1=Can charge§3 EV§7 items or lower.
+item.batpackBauble.t2.desc.2=You can charge this using a charge pad, or in a machine.
+item.batpackBauble.t2.desc.3=Usable in your battery belt slot.
 
 item.batpackBauble.t5.name=Portable Power Pack MKV
 item.batpackBauble.t5.desc.0=Charges your armor and held items.
