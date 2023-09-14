@@ -26,6 +26,12 @@ public class CommonProxy {
         try {
             BaubleExpandedSlots.tryRegisterType(Constants.batpackType);
             BaubleExpandedSlots.tryAssignSlotOfType(Constants.batpackType);
+
+            if (!BaubleExpandedSlots.isTypeRegistered(Constants.batpackType)) {
+                throw new RuntimeException();
+            }
+
+            BaublesBatPacks.info("Registered dedicated batpack slot");
         } catch (Exception e) {
             BaublesBatPacks.warn("Could not register dedicated batpack bauble slot");
         }
