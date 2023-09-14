@@ -3,6 +3,7 @@ package com.github.gtmega.baublesbatpacks.interfaces;
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
 import baubles.api.expanded.IBaubleExpanded;
+import baubles.common.BaublesExpanded;
 import com.github.gtmega.baublesbatpacks.Constants;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
@@ -14,7 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Optional;
 
-@Optional.Interface(modid = "baubles|expanded", iface = "baubles.api.expanded.IBaubleExpanded")
+@Optional.Interface(modid = BaublesExpanded.MODID, iface = "baubles.api.expanded.IBaubleExpanded")
 public interface IBatPackBauble extends IBauble, IBaubleExpanded, IElectricItem {
     @Override
     default void onWornTick(ItemStack batPack, EntityLivingBase player) {
