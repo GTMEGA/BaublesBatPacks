@@ -3,7 +3,7 @@
 repositories {
     maven {
         name = "ic2"
-        url = "http://maven.ic2.player.to/"
+        url = "https://mvn.falsepattern.com/ic2/"
         metadataSources {
             mavenPom()
             artifact()
