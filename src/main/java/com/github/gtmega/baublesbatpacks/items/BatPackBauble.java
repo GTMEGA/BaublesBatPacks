@@ -2,6 +2,7 @@ package com.github.gtmega.baublesbatpacks.items;
 
 import com.github.gtmega.baublesbatpacks.Tags;
 import com.github.gtmega.baublesbatpacks.interfaces.IBatPackBauble;
+import ic2.api.item.ElectricItem;
 import lombok.val;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -20,12 +21,22 @@ public class BatPackBauble extends Item implements IBatPackBauble {
 
     private IIcon icon;
 
+    @Override
+    public boolean showDurabilityBar(ItemStack stack) {
+        return true;
+    }
+
     public BatPackBauble(double maxCharge, int tier, double transferLimit) {
         this.setUnlocalizedName("batpackBauble.t" + tier);
         this.maxCharge = maxCharge;
         this.tier = tier;
         this.transferLimit = transferLimit;
         this.setMaxStackSize(1);
+    }
+
+    @Override
+    public double getDurabilityForDisplay(ItemStack stack) {
+        return 1D-(ElectricItem.manager.getCharge(stack) / maxCharge);
     }
 
     @Override
