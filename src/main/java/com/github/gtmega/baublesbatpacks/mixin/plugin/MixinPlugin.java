@@ -16,7 +16,7 @@ public final class MixinPlugin implements IMixinPlugin {
      * Logger provided by FalsePatternLib.
      */
     @Getter
-    private final Logger logger = IMixinPlugin.createLogger(Tags.MODNAME);
+    private final Logger logger = IMixinPlugin.createLogger(Tags.MOD_NAME);
 
     /**
      * Invoked by FalsePattern Lib to decide what targeted mods to check for.

@@ -7,19 +7,19 @@ import cpw.mods.fml.common.event.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = Tags.MODID,
-     version = Tags.VERSION,
-     name = Tags.MODNAME,
+@Mod(modid = Tags.MOD_ID,
+     version = Tags.MOD_VERSION,
+     name = Tags.MOD_NAME,
      acceptedMinecraftVersions = "[1.7.10]",
      dependencies = "required-after:IC2;" +
                     "required-after:Baubles; " +
                     "after:Baubles|Expanded; ")
 public class BaublesBatPacks {
 
-    private static Logger LOG = LogManager.getLogger(Tags.MODID);
+    private static Logger LOG = LogManager.getLogger(Tags.MOD_ID);
 
-    @SidedProxy(clientSide = Tags.GROUPNAME + ".ClientProxy",
-                serverSide = Tags.GROUPNAME + ".CommonProxy")
+    @SidedProxy(clientSide = Tags.ROOT_PKG + ".ClientProxy",
+                serverSide = Tags.ROOT_PKG + ".CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

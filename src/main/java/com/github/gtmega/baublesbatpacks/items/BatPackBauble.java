@@ -41,7 +41,7 @@ public class BatPackBauble extends Item implements IBatPackBauble {
 
     @Override
     public void registerIcons(IIconRegister registry) {
-        this.icon = registry.registerIcon(Tags.MODID + ":baubleBatpack_t" + this.tier);
+        this.icon = registry.registerIcon(Tags.MOD_ID + ":baubleBatpack_t" + this.tier);
     }
 
     @Override
